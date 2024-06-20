@@ -1,0 +1,18 @@
+.heading h1{
+    font-weight: 700;
+    font-size: 40px;
+    margin: 10px;
+    margin-bottom: 25px;
+}
+#input input{
+    width: 100%;
+}
+#col{
+    text-align: left;
+}
+#row{
+    margin: 2vh 1.2vw;
+}
+#btn button{
+    width: 6vw;
+}
