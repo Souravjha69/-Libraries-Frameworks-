@@ -1,5 +1,6 @@
 import Hello from "./Hello";
 import KgButton from "./KgButton";
+import Random from "./Random";
 
 function App() {
   return (
@@ -7,6 +8,9 @@ function App() {
       <h1>This is the best React Course</h1>
       <KgButton/>
       <Hello/>
+      <Random/>
+      <Random/>
+      <Random/>
     </>
   );
 }

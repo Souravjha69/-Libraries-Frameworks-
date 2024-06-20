@@ -1,8 +1,17 @@
 function Hello () {
+
+
+    // const myName = "Sourav";
+    let fullName = () => {
+        return 'Sourav kumar jha'
+    }
+    let number = 456;
+
     return (
         <>
-        <h3>Hello this is the future speaking.</h3>
+        <p>Message Number : {number}. I'm you master {fullName()}</p> 
         </>
+        // This is Dynamism
     );
 }
 
