@@ -1,4 +1,6 @@
-import React from "react";
+// import React from "react";
+import FoodItems from "./components/FoodItems";
+import ErrorMsg from "./components/ErrorMsg";
 
 function App () {
 
@@ -11,19 +13,15 @@ function App () {
   // }
 
   // 2nd Way of Doing : -
-  let emptyMsg = foodItems.length === 0 ? <h3>I'm still hungry.</h3> : null
+ 
 
 
   return (
     <>
    
     <h3>Healthy Food</h3>
-    {emptyMsg}
-    {/* 3rd Way of Doing :- 
-    {foodItems.length === 0 ? <h3>I'm still hungry.</h3> : null} */}
-    <ul className="list-group">
-      {foodItems.map(item => <li key={item} className="list-group-item">{item}</li>)}
-</ul>
+    <ErrorMsg items ={foodItems}/>
+    <FoodItems items = {foodItems}/>
     </>
   )
 };
