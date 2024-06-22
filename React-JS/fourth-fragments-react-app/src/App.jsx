@@ -1,7 +1,7 @@
 // import React from "react";
 import FoodItems from "./components/FoodItems";
 import ErrorMsg from "./components/ErrorMsg";
-
+import "./App.css";
 function App () {
 
   // let foodItems = [];
@@ -19,11 +19,11 @@ function App () {
   return (
     <>
    
-    <h3>Healthy Food</h3>
+    <h3 className="header">Healthy Food</h3>
     <ErrorMsg items ={foodItems}/>
     <FoodItems items = {foodItems}/>
     </>
-  )
-};
+  );
+}
 
 export default App;
