@@ -2,8 +2,8 @@
 import FoodItems from "./components/FoodItems";
 import ErrorMsg from "./components/ErrorMsg";
 import "./App.css";
-function App () {
-
+import Container from "./components/Container";
+function App() {
   // let foodItems = [];
   let foodItems = ["Dal", "Green Vegetable", "Roti", "Salad", "Milk", "Ghee"];
 
@@ -13,15 +13,20 @@ function App () {
   // }
 
   // 2nd Way of Doing : -
- 
-
 
   return (
     <>
-   
-    <h3 className="header">Healthy Food</h3>
-    <ErrorMsg items ={foodItems}/>
-    <FoodItems items = {foodItems}/>
+      <Container>
+        <h3 className="header">Healthy Food</h3>
+        <ErrorMsg items={foodItems} />
+        <FoodItems items={foodItems} />
+      </Container>
+      <Container>
+        <p>
+          Above is the list of healthy foods that are good for your health and
+          well being.
+        </p>
+      </Container>
     </>
   );
 }
