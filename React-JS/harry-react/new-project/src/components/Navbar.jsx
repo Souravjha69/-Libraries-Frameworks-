@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 function Navbar(props) {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             {props.tittlename}
@@ -39,7 +39,7 @@ function Navbar(props) {
                 placeholder="Search"
                 aria-label="Search"
               />
-              <button className="btn btn-outline-success" type="submit">
+              <button className="btn btn-outline-primary" type="submit">
                 Search
               </button>
             </form>
@@ -53,7 +53,7 @@ function Navbar(props) {
 export default Navbar;
 
 Navbar.propTypes = { tittlename: PropTypes.string.isRequired }; // This is the checklist required ki props string me hi jani chahiye.
-// Navbar.defaultProps = { tittlename: "Portfolio Default" }; // This is ki is props pass na kru to default props ye jani chahiye.
+Navbar.defaultProps = { tittlename: "Portfolio Default" }; // This is ki is props pass na kru to default props ye jani chahiye.
 
  // isRequired is there because tittlename undefined nahi hona chahiye chahe kuch bhi ho , error 
- //show kr jayega if khali hoga name.
+ //show kr jayega if khali hoga name
