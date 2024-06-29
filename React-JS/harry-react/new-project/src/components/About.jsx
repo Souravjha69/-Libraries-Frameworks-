@@ -1,9 +1,49 @@
+import { useState } from "react";
+
 function About() {
+    // let myStyle = {
+    //   color: "white",
+    //   backgroundColor: "black",
+    //   border: "1px solid white",
+    //   borderRadius: "4px"
+    // };
+  const [btnText, setBtnText] = useState("Enable Light Mode");
+
+
+    const [myStyle, setMyStyle] = useState({
+        color: "white",
+      backgroundColor: "black",
+      border: "1px solid white",
+      borderRadius: "4px"
+    });
+
+  const  toggleStyle = () => {
+        if (myStyle.color == 'white'){
+            setMyStyle(
+                {
+                    color: "black",
+                    backgroundColor: "white"
+                }
+            )
+            setBtnText("Enable Dark Mode")
+        }
+        else{
+            setMyStyle(
+                {
+                    backgroundColor: "black",
+                    color: "white"
+                }
+            )
+            setBtnText("Enable Light Mode")
+        }
+    }
+    
     return (
       <>
-        <div className="container">
+        <div className="container" style={myStyle}>
+          <h1 className="my-4">About Us</h1>
           <div className="accordion" id="accordionExample">
-            <div className="accordion-item">
+            <div className="accordion-item" style={myStyle}>
               <h2 className="accordion-header">
                 <button
                   className="accordion-button"
@@ -12,6 +52,7 @@ function About() {
                   data-bs-target="#collapseOne"
                   aria-expanded="true"
                   aria-controls="collapseOne"
+                  style={myStyle}
                 >
                   Accordion Item #1
                 </button>
@@ -20,6 +61,7 @@ function About() {
                 id="collapseOne"
                 className="accordion-collapse collapse show"
                 data-bs-parent="#accordionExample"
+                style={myStyle}
               >
                 <div className="accordion-body">
                   <strong>This is the first item's accordion body.</strong> It is
@@ -27,14 +69,13 @@ function About() {
                   classes that we use to style each element. These classes control
                   the overall appearance, as well as the showing and hiding via
                   CSS transitions. You can modify any of this with custom CSS or
-                  overriding our default variables. It also worth noting that
-                  just about any HTML can go within the{" "}
-                  <code>.accordion-body</code>, though the transition does limit
-                  overflow.
+                  overriding our default variables. It also worth noting that just
+                  about any HTML can go within the <code>.accordion-body</code>,
+                  though the transition does limit overflow.
                 </div>
               </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item" style={myStyle}>
               <h2 className="accordion-header">
                 <button
                   className="accordion-button collapsed"
@@ -43,6 +84,7 @@ function About() {
                   data-bs-target="#collapseTwo"
                   aria-expanded="false"
                   aria-controls="collapseTwo"
+                  style={myStyle}
                 >
                   Accordion Item #2
                 </button>
@@ -51,6 +93,7 @@ function About() {
                 id="collapseTwo"
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
+                style={myStyle}
               >
                 <div className="accordion-body">
                   <strong>This is the second item's accordion body.</strong> It is
@@ -65,7 +108,7 @@ function About() {
                 </div>
               </div>
             </div>
-            <div className="accordion-item">
+            <div className="accordion-item" style={myStyle}>
               <h2 className="accordion-header">
                 <button
                   className="accordion-button collapsed"
@@ -74,6 +117,7 @@ function About() {
                   data-bs-target="#collapseThree"
                   aria-expanded="false"
                   aria-controls="collapseThree"
+                  style={myStyle}
                 >
                   Accordion Item #3
                 </button>
@@ -82,6 +126,7 @@ function About() {
                 id="collapseThree"
                 className="accordion-collapse collapse"
                 data-bs-parent="#accordionExample"
+                style={myStyle}
               >
                 <div className="accordion-body">
                   <strong>This is the third item's accordion body.</strong> It is
@@ -96,6 +141,11 @@ function About() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="container my-3 ">
+            <button type="button" className="btn btn-primary" onClick={toggleStyle}>
+             {btnText}
+            </button>
           </div>
         </div>
       </>

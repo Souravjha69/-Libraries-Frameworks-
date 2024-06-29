@@ -23,6 +23,12 @@ function TextForm(props) {
     let newwText = "";
     setText(newwText);
   };
+  const handleCopy = () => {
+    console.log("I am Copy ");
+    var text = document.getElementById("myBox");
+    text.select();
+    navigator.clipboard.writeText(text.value);
+  }
   return (
     <>
       <div className="container my-3">
@@ -47,6 +53,9 @@ function TextForm(props) {
         </button>
         <button className="btn btn-outline-success" onClick={handleClearClick}>
           Clear Text
+        </button>
+        <button className="btn btn-outline-success mx-2" onClick={handleCopy}>
+          Copy Text
         </button>
       </div>
       <div className="container my-4">
