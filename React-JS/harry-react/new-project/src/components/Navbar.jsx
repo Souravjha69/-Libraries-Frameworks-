@@ -3,7 +3,10 @@ import PropTypes from "prop-types";
 function Navbar(props) {
   return (
     <>
-      <nav className="navbar navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body" data-bs-theme="dark">
+      <nav
+        className={`navbar navbar-expand-lg ${props.mode === 'dark' ? 'bg-dark' : 'bg-light'} border-bottom border-body`}
+        data-bs-theme={props.mode}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             {props.tittlename}
@@ -32,17 +35,21 @@ function Navbar(props) {
                 </a>
               </li>
             </ul>
-            <form className="d-flex" role="search">
+            <div className={`form-check form-switch ${props.mode === 'dark' ? 'text-light' : 'text-dark'}`}>
               <input
-                className="form-control me-2"
-                type="search"
-                placeholder="Search"
-                aria-label="Search"
+                className="form-check-input"
+                type="checkbox"
+                role="switch"
+                id="flexSwitchCheckDefault"
+                onClick={props.toggleMode}
               />
-              <button className="btn btn-outline-primary" type="submit">
-                Search
-              </button>
-            </form>
+              <label
+                className="form-check-label"
+                htmlFor="flexSwitchCheckDefault"
+              >
+                {props.mode === 'dark' ? 'Enable Light Mode' : 'Enable Dark Mode'}
+              </label>
+            </div>
           </div>
         </div>
       </nav>
@@ -50,10 +57,15 @@ function Navbar(props) {
   );
 }
 
+Navbar.propTypes = { 
+  tittlename: PropTypes.string.isRequired,
+  mode: PropTypes.string.isRequired,
+  toggleMode: PropTypes.func.isRequired
+};
+
+Navbar.defaultProps = { 
+  tittlename: "Portfolio Default",
+  mode: 'light'
+};
+
 export default Navbar;
-
-Navbar.propTypes = { tittlename: PropTypes.string.isRequired }; // This is the checklist required ki props string me hi jani chahiye.
-Navbar.defaultProps = { tittlename: "Portfolio Default" }; // This is ki is props pass na kru to default props ye jani chahiye.
-
- // isRequired is there because tittlename undefined nahi hona chahiye chahe kuch bhi ho , error 
- //show kr jayega if khali hoga name
