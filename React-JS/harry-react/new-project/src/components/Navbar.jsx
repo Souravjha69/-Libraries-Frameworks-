@@ -57,6 +57,7 @@ function Navbar(props) {
   );
 }
 
+
 Navbar.propTypes = { 
   tittlename: PropTypes.string.isRequired,
   mode: PropTypes.string.isRequired,
