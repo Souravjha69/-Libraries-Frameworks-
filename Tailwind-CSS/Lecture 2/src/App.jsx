@@ -1,5 +1,6 @@
 // import React from "react";
 
+import Notation from "./components/BracketNotation";
 import Margin from "./components/Margin";
 import Testing from "./components/Testing";
 
@@ -8,6 +9,7 @@ function App () {
     <>
     <Testing/>
     <Margin/>
+    <Notation/>
     </>
   );
 }
