@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+/* This is that kind of class that we use before the utilities class */
+.btn{
+    @apply bg-red-400 rounded py-3 px-4 font-medium;
+}
+@tailwind utilities;
+/* This is Applied directive means utilities class ke baad isko use kiya jata hai */
+.utl{
+    @apply bg-lime-600 w-96 text-center;
+}
