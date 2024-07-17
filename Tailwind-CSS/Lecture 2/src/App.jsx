@@ -2,6 +2,7 @@
 
 import Notation from "./components/BracketNotation";
 import Margin from "./components/Margin";
+import Responsiveness from "./components/Responsiveness";
 import Testing from "./components/Testing";
 
 function App () {
@@ -10,6 +11,7 @@ function App () {
     <Testing/>
     <Margin/>
     <Notation/>
+    <Responsiveness/>
     </>
   );
 }
