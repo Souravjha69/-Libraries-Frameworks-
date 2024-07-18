@@ -9,6 +9,7 @@ function ApplyDirective() {
           non fugiat quisquam corrupti cumque illo rem blanditiis voluptatem
           quis expedita culpa?
         </p>
+        {/* Command to get full config File {npx tailwindcss init confSourav --full} */}
       </div>
     </>
   );
