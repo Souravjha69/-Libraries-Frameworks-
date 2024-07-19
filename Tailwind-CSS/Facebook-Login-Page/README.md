@@ -1,8 +1,17 @@
-# React + Vite
+# React + Vite + Tailwind CSS
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+![Facebook Login Page output](https://github.com/user-attachments/assets/79438f09-391b-47bd-9d8c-74f2c0da8b7a)
+A simple and responsive Facebook login page clone created with Tailwind CSS. This project demonstrates the use of Tailwind CSS to build a clean, modern, and mobile-friendly login interface similar to Facebook's.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**Features:**
+
+Responsive design
+Tailwind CSS for rapid styling
+Mobile-friendly layout
+Clean and modern UI
+Technologies Used:
+
+**HTML
+Tailwind CSS**
+Feel free to fork, clone, and contribute!
