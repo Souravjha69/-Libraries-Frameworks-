@@ -7,7 +7,7 @@ function ApplyDirective() {
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
           aspernatur numquam? Accusamus impedit natus, veniam sed, illum aut,
           non fugiat quisquam corrupti cumque illo rem blanditiis voluptatem
-          quis expedita culpa?
+          quis expedita culpa mia?
         </p>
         {/* Command to get full config File {npx tailwindcss init confSourav --full} */}
       </div>
